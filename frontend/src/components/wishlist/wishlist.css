@@ -39,7 +39,7 @@
   /* position: sticky; */
 
   /* width: 1200px; */
-  /* display: flex; */
+  display: flex;
   /* flex-direction: row; */
   /* justify-content: right; */
 }
@@ -116,6 +116,9 @@
   padding-top: 60px;
   width: 600px;
   border: solid 2px #dddbdb;
+    position: sticky;
+    top : 80px;
+
 }
 
 .noteBttn {

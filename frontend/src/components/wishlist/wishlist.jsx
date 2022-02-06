@@ -87,7 +87,7 @@ const Wishlist = () => {
             setNote(e.target.value);
           }}
           type="text"
-          placeholder="note"
+          placeholder="Add Note!"
         ></input>
         <button
         className="noteBttn"
