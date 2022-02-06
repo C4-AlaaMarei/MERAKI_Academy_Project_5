@@ -10,6 +10,8 @@
     font-weight: bold;
     font-display: swap;
   }
+
+  
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -116,9 +118,8 @@
   padding-top: 60px;
   width: 600px;
   border: solid 2px #dddbdb;
-    position: sticky;
-    top : 80px;
-
+  position: sticky;
+  top: 80px;
 }
 
 .noteBttn {
