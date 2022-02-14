@@ -1,10 +1,10 @@
 -- select the roles wthe all permissions 
 -- {SELECT permissions.permission FROM roles join role_permission ON roles.id = role_permission.role join permissions on role_permission.permission = permissions.id
 -- where roles.id =2}
-DROP DATABASE MERAKI_Academy_Project_5;
+-- DROP DATABASE MERAKI_Academy_Project_5;
 
 -- DROP DATABASE MERAKI_Academy_Project_5;
-CREATE DATABASE MERAKI_Academy_Project_5;
+-- CREATE DATABASE MERAKI_Academy_Project_5;
 
 -- CREAT DATABASE MERAKI_Academy_Project_5;
 -- USE DATABASE MERAKI_Academy_Project_5;
@@ -118,6 +118,8 @@ CREATE TABLE service_request (
     address VARCHAR(100) NOT NULL,
     phone VARCHAR(100),
     worker_id INT NOT NULL,
+    email VARCHAR(100),
+
     FOREIGN KEY (worker_id) REFERENCES worker (user_id),
     is_deleted TINYINT DEFAULT 0,
     PRIMARY KEY (id)
@@ -228,3 +230,15 @@ INSERT INTO
 --     )
 -- VALUES
 --     (1, 1, 'zarqa', 345435435, '5345435435');
+
+INSERT INTO
+    service_request (
+    name,
+    order_Detalis,
+    address,
+    phone,
+    worker_id,
+    email
+    )
+VALUES
+    ('rrrrr', 'hhhhhhh', 'salt', 777777777, 1, 'ss@ss');

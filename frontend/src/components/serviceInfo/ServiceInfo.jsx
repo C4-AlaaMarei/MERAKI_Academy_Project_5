@@ -3,6 +3,8 @@ import "./serviceInfo.css";
 import { useState } from "react";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import axios from "axios";
+import jwt from "jwt-decode";
+
 const WSInfo = ({ setShowWorker }) => {
   const [name, setName] = useState();
   const [address, setAddress] = useState();
@@ -30,6 +32,8 @@ const WSInfo = ({ setShowWorker }) => {
           address,
           phone,
           worker_id,
+          email:jwt(token).email
+
         },
         {
           headers: {
@@ -37,8 +41,14 @@ const WSInfo = ({ setShowWorker }) => {
           },
         }
       )
-      .then((result) => {})
-      .catch((err) => {});
+      .then((result) => {
+        console.log(result);
+        console.log(jwt(token).email)
+      })
+      .catch((err) => {
+        console.log(err);
+
+      });
   };
 
   return (

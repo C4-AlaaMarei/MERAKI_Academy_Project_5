@@ -7,7 +7,10 @@ import { useNavigate } from "react-router-dom";
 import jsw from "jwt-decode";
 import { useSelector, useDispatch } from "react-redux";
 import { setRequests } from "../../reducer/service/index";
-
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+// import Approve from "./components/approve/approve";
+// import Reject from "./components/reject/reject";
 import { setWorkers } from "../../reducer/worker/index";
 const Profile = () => {
   const [message, setMessage] = useState();
@@ -17,6 +20,7 @@ const Profile = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
+  // const form = useRef();
 
   const { token, services, worker, requests } = useSelector((state) => {
     return {
@@ -128,6 +132,8 @@ const Profile = () => {
                     <td>{req.order_Detalis}</td>
                     <td>{req.address}</td>
                     <td>{req.phone}</td>
+                    <td>{req.email}</td>
+
                     <td>
                       <button>Approve</button>
                     </td>
