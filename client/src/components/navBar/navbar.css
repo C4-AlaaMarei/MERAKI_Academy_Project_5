@@ -1,0 +1,41 @@
+/** @format */
+
+.NavBar {
+  font-weight: bold;
+  background-color: white;
+  display: grid;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+.Link {
+  background-color: rgb(4, 81, 140);
+  height: 60px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-bottom: solid 3px #ffd333;
+}
+.NavBar h2 {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  /* grid-template-columns: repeat(7, 150px);
+  text-align: right;
+  font-size: 18px; */
+}
+
+.NavBar a {
+    color: white;
+   padding: 1%;
+   font-size: 18px;
+  margin-top: 5px;
+  /* margin-left: 130px; */
+  /* width: 150px; */
+  text-align: center; 
+}
+
+.NavBar a:hover {
+  color: black;
+  background-color: #ffd333;
+  border-radius: 5px;
+}
